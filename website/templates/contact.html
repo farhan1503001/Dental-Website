@@ -124,7 +124,7 @@
             </div>
 
             <!-- Booking Now Button -->
-            <a href="#" class="btn dento-btn booking-btn">Booking Now</a>
+            <a href="{% url 'home' %}" class="btn dento-btn booking-btn">Booking Now</a>
           </nav>
         </div>
       </div>
@@ -164,8 +164,7 @@
       <div class="row">
         <div class="col-12">
           <div class="google-maps mb-100">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11956.9355465873!2d24.0768412544878!3d56.9550599906977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb0e5073ded%3A0x400cfcd68f2fe30!2z4Kaw4Ka_4KaX4Ka-LCDgprLgp43gpq_gpr7gpp_gp43gpq3gpr_gpoY!5e0!3m2!1sbn!2sbd!4v1543911160102"
-              allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.960498630858!2d90.38158671479664!3d23.748787994755205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b0705892a5%3A0x93e5fe88bf727382!2zMTc2IEJhc2hpciBVZGRpbiBSZCwg4Kai4Ka-4KaV4Ka-IDEyMDU!5e0!3m2!1sbn!2sbd!4v1623138495409!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>"
           </div>
         </div>
       </div>
@@ -197,7 +196,8 @@
               <div class="line"></div>
             </div>
             <!-- Form -->
-            <form action="#" method="post">
+            <form action="{% url 'contact' %}" method="post">
+              {% csrf_token %}
               <div class="row">
                 <div class="col-lg-6">
                   <input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
@@ -228,7 +228,7 @@
         <!-- Single Footer Widget -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-footer-widget">
-            <a href="{% url 'contanct' %}" class="d-block mb-4"><img src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
+            <a href="{% url 'contact' %}" class="d-block mb-4"><img src="{% static 'website/img/core-img/logo.png' %}" alt=""></a>
             <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
             <div class="footer-contact">
               <p><i class="icon_pin"></i>176,Bashir Uddin Road, Kalabagan, North Dhanmondi, Dhaka</p>
